@@ -5,7 +5,9 @@
 	git clone https://github.com/amankumarkeshu/Github-Tracker.git
 	cd Github-Tracker
 	sudo npm install 
-	sudo R_Setup.sh
+	sudo bash R_Setup.sh
+	# To quit R terminal
+	q()
 	sudo npm start
 
 ```
