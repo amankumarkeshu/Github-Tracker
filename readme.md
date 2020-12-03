@@ -5,7 +5,9 @@
 	git clone https://github.com/amankumarkeshu/Github-Tracker.git
 	cd Github-Tracker
 	sudo npm install 
-	sudo R_Setup.sh
+	sudo bash R_Setup.sh
+	# To quit R terminal
+	q()
 	sudo npm start
 
 ```
@@ -19,7 +21,7 @@ RESTful API, endpoints (URLs), API has GET, POST features present at the mention
 Endpoint |HTTP Method | CRUD Method | Result
 -- | -- |-- |--
 `/` | GET  | READ | Get Home page
-`/` | POST | CREATE | Create a user and repo and search
+`/` | POST | CREATE | Enter user and repository details to search
 `/index` | GET | READ | Get a single result
 
 
