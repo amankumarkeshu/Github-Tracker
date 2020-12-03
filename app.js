@@ -24,6 +24,10 @@ app.get("/index", function(req, res){
 
 });
 
+/* 
+    Function to get user's commit history of the last year and 
+    convert json data to csv format and save it in a file
+*/
 function commits(username,repo){
     const commitUrl = 'https://api.github.com/repos/'+username+'/'+repo+'/stats/commit_activity';
     (async () => {
@@ -52,6 +56,10 @@ function commits(username,repo){
     })();
 }
 
+/* 
+    Function to get user's number of lines added per week to the repository and
+    convert json data to csv format and save it in a file
+*/
 function additions(username,repo){
     const url = 'https://api.github.com/repos/'+username+'/'+repo+'/stats/code_frequency';
     (async () => {
@@ -79,7 +87,10 @@ function additions(username,repo){
     })();
 }
 
-
+/* 
+    Function to get user's number of lines deleted per week to the repository and
+    convert json data to csv format and save it
+*/
 function deletions(username,repo){
     const url = 'https://api.github.com/repos/'+username+'/'+repo+'/stats/code_frequency';
     (async () => {
@@ -112,9 +123,17 @@ app.post("/",  (req, res)=> {
     if(username==='' || repo==='') 
         res.render("home.ejs");
 
+    /* 
+        Functions to fetch User Data and store them in a csv File
+    */
     commits(username,repo);
     additions(username,repo);
     deletions(username,repo);
+
+    /*
+        Runs the Rscript command to fetch the csv data and plot the data in a bargraph and 
+        save it in the PDF file Rplots.pdf
+    */
 
     var yourscript = exec('Rscript myscript.r',(error,stdout,stderr) =>{
         console.log(stdout);
