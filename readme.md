@@ -1,8 +1,12 @@
-# REST API - CIQ
+# REST API - Github Tracker
 
 ## Running the Project Locally
 ```
+	git clone 
+	cd Github-Tracker
 	sudo npm install 
+	sudo R_Setup.sh
+	sudo npm start
 
 ```
 The project will be available at **http://localhost:3000/**.
@@ -10,12 +14,12 @@ The project will be available at **http://localhost:3000/**.
 
 
 ## Structure
-RESTful API, endpoints (URLs), API has GET, POST, PUT, PATCH, DELETE features present at the mentioned endpoints. It also has filtering features.
+RESTful API, endpoints (URLs), API has GET, POST features present at the mentioned endpoints. It also has filtering features.
 
 Endpoint |HTTP Method | CRUD Method | Result
 -- | -- |-- |--
-`/` | GET | READ | Get Home page
-`/`| POST | CREATE | Create a user and repo and search
+`/` | GET  | READ | Get Home page
+`/` | POST | CREATE | Create a user and repo and search
 `/index` | GET | READ | Get a single result
 
 
