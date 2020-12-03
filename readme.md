@@ -2,7 +2,7 @@
 
 ## Running the Project Locally
 ```
-	git clone 
+	git clone https://github.com/amankumarkeshu/Github-Tracker.git
 	cd Github-Tracker
 	sudo npm install 
 	sudo R_Setup.sh
@@ -27,19 +27,20 @@ Endpoint |HTTP Method | CRUD Method | Result
 ## Screenshot
 
 ## API Root
-![](static/root.JPG)
+![](static/UserInput.png)
 <br />
 
 ## GET
-![](static/postslist.JPG)
+![](static/getData.png)
 <br />
 
-## Post PATCH
-![](static/post-id-patch.JPG)
+## GET Commit Data
+![](static/Commits.png)
 <br />
 
-## Authors/id/posts - Nested
-![](static/authors-id-posts.JPG)
-
-## Filter
-![](static/filter-post.JPG)
+## GET Number Of Lines Added per Week 
+![](static/Additions.png)
+<br />
+##  GET Number Of Lines Deleted per Week 
+![](static/Deletions.png)
+<br />
